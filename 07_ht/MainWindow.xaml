@@ -1,0 +1,36 @@
+﻿<Window x:Class="_07_ht.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_07_ht"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Left">
+            <Button Content="Load Single Resume" Width="150" Margin="5" Click="LoadSingleResumeBtn"/>
+            <Button Content="Load Multiple Resumes" Width="160" Margin="5" Click="LoadMultipleResumes"/>
+            <Button Content="Load from Folder" Width="140" Margin="5" Click="LoadFromFolder"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Grid.Row="1" HorizontalAlignment="Left">
+            <Button Content="Most Experienced" Width="100" Margin="5" Click="ShowMostExperienced_Click"/>
+            <Button Content="Least Experienced" Width="100" Margin="5" Click="ShowLeastExperienced"/>
+            <Button Content="Lowest Salary" Width="100" Margin="5" Click="ShowLowestSalary"/>
+            <Button Content="Highest Salary" Width="100" Margin="5" Click="ShowHighestSalary"/>
+            <ComboBox Name="combobox" Width="150" Margin="5"/>
+            <Button Content="Filter by City" Width="100" Margin="5" Click="ShowByCityBtn"/>
+        </StackPanel>
+
+        <ListBox Name="list" Grid.Row="2" Margin="0,0,0,10"/>
+
+        <TextBox Name="text" Grid.Row="3" Margin="0" IsReadOnly="True" FontSize="14"/>
+    </Grid>
+</Window>
